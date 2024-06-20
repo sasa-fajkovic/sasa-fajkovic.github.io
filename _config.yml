@@ -6,7 +6,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "default"
 locale                   : "en-US"
 title                    : "Sasa Fajkovic"
 title_separator          : "-"
-subtitle                 : "Dev blog"
+subtitle                 : "blog that makes you think"
 name                     : &name "Sasa Fajkovic" # &name is a YAML anchor which can be *referenced later
 description              : &description "Tech oriented blog focusing on development and management topics"
 url                      : https://sasa-fajkovic.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
