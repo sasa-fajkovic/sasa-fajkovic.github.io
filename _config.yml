@@ -66,7 +66,7 @@ social:
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : "/assets/images/michael-rose.jpg"
-  bio              : "Just another *boring*, *tattooed*, *time traveling*, *designer*."
+  bio              : "Motorcycle goes vruuum"
   location         : "Berlin, DE"
   links:
     - label: "CV website"
@@ -75,6 +75,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sasa-fajkovic"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/sasa-fajkovic/"
 
 # site footer
 footer:
@@ -85,6 +88,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sasa-fajkovic"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/sasa-fajkovic/"
 
 # Reading Files
 include:
