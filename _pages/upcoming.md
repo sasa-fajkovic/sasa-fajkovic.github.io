@@ -22,3 +22,5 @@ Ths list does not represent an order in which posts will be made. On the contrar
 - [ ] *arr setup with RPi VPN in a different country
 - [ ] Break free from music and video subscriptions - use *arr instead
 - [ ] Over a decade of teaching - expectation management VS sales
+- [ ] Monthly budgeting FTW
+- [ ] No emergency savings fund is a better idea for wealth growth starters
