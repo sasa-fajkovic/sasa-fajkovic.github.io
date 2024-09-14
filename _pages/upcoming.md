@@ -24,3 +24,4 @@ Ths list does not represent an order in which posts will be made. On the contrar
 - [ ] Over a decade of teaching - expectation management VS sales
 - [ ] Monthly budgeting FTW
 - [ ] No emergency savings fund is a better idea for wealth growth starters
+- [ ] Moving away from Notion to Obsidian. Why and how to overcome multidevice sync
