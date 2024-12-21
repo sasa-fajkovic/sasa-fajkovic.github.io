@@ -14,13 +14,20 @@ import { getPermalink } from '~/utils/permalinks';
 const metadata = {
   title: 'Personal Homepage Demo',
 };
-
 ---
 
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
     <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'Resume', href: '#resume' },
+        { text: 'Publications', href: '#publications' },
+        { text: 'Projects', href: '/projects'},
+        { text: 'Blog', href: '/blog' },
+      ]}
       actions={[
         {
           text: 'Reach out',
@@ -162,45 +169,47 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <Features3
+  <Content
     id="publications"
-    title="Publications"
-    subtitle="A bit old, yet actively used with professionals and academia"
-    columns={2}
+    title="Solving complex problems, delivering impactful solutions"
+    subtitle="From an idea, to a working solution, accepting uncertanty and working with an agile mindset"
+    isReversed
     items={[
       {
-        title: 'Microsoft Word 2016',
-        description: 'Comprehensive guide on writing and editing documents<br >Year: 2016<br>ISBN: 978-953-58990-0-6',
-        icon: 'tabler:stairs',
+        title: 'Description:',
+        description:
+          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
       },
       {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
-        icon: 'tabler:flip-vertical',
-      },
-      {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
-        icon: 'tabler:shield-lock',
-      },
-      {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
-        icon: 'tabler:accessible',
-      },
-      {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
-        icon: 'tabler:chevrons-up',
-      },
-      {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
-        icon: 'tabler:headset',
+        title: 'Role:',
+        description:
+          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
       },
     ]}
-    classes={{ container: 'max-w-5xl' }}
-  />
+    image={{
+      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
+      alt: 'Tech Design Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 1: <br /><span class="text-2xl">Brand identity for tech innovators</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  
+  <!-- Content Widget **************** -->
+
   
 
   <Content

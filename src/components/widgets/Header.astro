@@ -34,7 +34,14 @@ export interface Props {
 
 const {
   id = 'header',
-  links = [],
+  links = [
+    { text: 'Home', href: '#' },
+    { text: 'About', href: '#about' },
+    { text: 'Resume', href: '#resume' },
+    { text: 'Publications', href: '#publications' },
+    { text: 'Projects', href: '/projects'},
+    { text: 'Blog', href: '/blog' },
+  ],
   actions = [],
   isSticky = false,
   isDark = false,
