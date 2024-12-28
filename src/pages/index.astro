@@ -38,7 +38,7 @@ const metadata = {
     id="hero"
     title="Sasa Fajkovic"
     tagline="Tech lead"
-    actions={[{ variant: 'secondary', text: 'Read my articles', href: getPermalink('/blog') }]}
+    
   >
     <Fragment slot="subtitle">
       I'm a leader in technical domain with product mindset. KPI and data driven, result oriented.
@@ -166,36 +166,46 @@ const metadata = {
     id="publications"
     title="Publications"
     subtitle="A bit old, yet actively used with professionals and academia"
-    columns={2}
+    columns={3}
     items={[
       {
         title: 'Microsoft Word 2016',
-        description: 'Comprehensive guide on writing and editing documents<br >Year: 2016<br>ISBN: 978-953-58990-0-6',
+        description: 'Comprehensive guide on writing and editing documents<br />Year: 2016<br />ISBN: 978-953-58990-0-6',
         icon: 'tabler:stairs',
       },
       {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
+        title: 'Microsoft Excel 2013',
+        description: 'Power of spredsheet calculations<br />Year: 2015<br />',
         icon: 'tabler:flip-vertical',
       },
       {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
+        title: 'C++ programming language',
+        description: 'C++ - Introduction to programming<br />Year:2015',
         icon: 'tabler:shield-lock',
       },
       {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
+        title: 'HTML5 & CSS3',
+        description: `Simple website creation.<br />Year: 2015`,
         icon: 'tabler:accessible',
       },
       {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
+        title: 'JavaScript',
+        description: 'Introduction to programming using JavaScript<br />Year: 2015',
         icon: 'tabler:chevrons-up',
       },
       {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
+        title: 'Microsoft Word 2013',
+        description: 'From beginner to editor<br />Year:2014',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'C# & Windows Forms',
+        description: 'Introduction to programming using C# and Windows Forms<br />Year: 2014',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'C++',
+        description: 'Introduction to programming<br />Year: 2012',
         icon: 'tabler:headset',
       },
     ]}
@@ -230,7 +240,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
+        Project 1: <br /><span class="text-2xl">Event poster for art & music festival</span>
       </h3>
     </Fragment>
 
@@ -242,7 +252,6 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
     isAfterContent={true}
     items={[
       {
@@ -267,7 +276,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
+        Project 2: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
       </h3>
     </Fragment>
 
@@ -275,6 +284,42 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
+
+  <Content
+  isReversed
+  isAfterContent={true}
+  items={[
+    {
+      title: 'Description:',
+      description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
+    },
+    {
+      title: 'Role:',
+      description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
+    },
+  ]}
+  image={{
+    src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+    alt: 'Fashion e-commerce Image',
+  }}
+  callToAction={{
+    target: '_blank',
+    text: 'Go to the project',
+    icon: 'tabler:chevron-right',
+    href: '#',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
 
   <!-- CallToAction Widget *********** -->
 
