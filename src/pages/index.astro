@@ -10,9 +10,10 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
+import Button from '~/components/ui/Button.astro';
 
 const metadata = {
-  title: 'Personal Homepage Demo',
+  title: 'Sasa Fajkovic - tech lead',
 };
 
 ---
@@ -38,7 +39,6 @@ const metadata = {
     id="hero"
     title="Sasa Fajkovic"
     tagline="Tech lead"
-    
   >
     <Fragment slot="subtitle">
       I'm a leader in technical domain with product mindset. KPI and data driven, result oriented.
@@ -49,7 +49,7 @@ const metadata = {
 
   <Content
     id="about"
-    columns={3}
+    columns={2}
     image={{
       src: 'https://sasa-fajkovic.com/images/sasaFajkovicBlack.webp',
       alt: 'Colorful Image',
@@ -58,16 +58,25 @@ const metadata = {
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
-      <p>
+      <p style="text-align: justify;">
         Welcome to my personal page. My work is a testament to my commitment to bringing great ideas to life, 
         successfully overomming challenges and achieving complex goals.
       </p>
       <br />
-      <p>
+      <p style="text-align: justify;">
           Never settling for mediocre explanations and pushing the boundaries to achieve goals which seemd unrealistic. 
           Being adaptive and quick to react is crucial to succeed in todays dynamic world 
       </p>
       <br />
+      <Button 
+      variant='primary',
+      text='PDF CV',
+      href="https://sasa-fajkovic.com/SasaFajkovicCV.pdf",
+      target='_blank',
+      class:list="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-4"
+      >
+
+      </Button>
     </Fragment>
 
     <Fragment slot="bg">
@@ -83,12 +92,12 @@ const metadata = {
     information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
   </BlogLatestPosts>
 
   <Steps
-    id="resume"
+    id="professional-journey"
     title="Professional journey"
     items={[
       {
@@ -160,224 +169,114 @@ const metadata = {
   />
 
 
-  <!-- Content Widget **************** -->
-
   <Features3
-    id="publications"
-    title="Publications"
-    subtitle="A bit old, yet actively used with professionals and academia"
-    columns={3}
-    items={[
-      {
-        title: 'Microsoft Word 2016',
-        description: 'Comprehensive guide on writing and editing documents<br />Year: 2016<br />ISBN: 978-953-58990-0-6',
-        icon: 'tabler:stairs',
-      },
-      {
-        title: 'Microsoft Excel 2013',
-        description: 'Power of spredsheet calculations<br />Year: 2015<br />',
-        icon: 'tabler:flip-vertical',
-      },
-      {
-        title: 'C++ programming language',
-        description: 'C++ - Introduction to programming<br />Year:2015',
-        icon: 'tabler:shield-lock',
-      },
-      {
-        title: 'HTML5 & CSS3',
-        description: `Simple website creation.<br />Year: 2015`,
-        icon: 'tabler:accessible',
-      },
-      {
-        title: 'JavaScript',
-        description: 'Introduction to programming using JavaScript<br />Year: 2015',
-        icon: 'tabler:chevrons-up',
-      },
-      {
-        title: 'Microsoft Word 2013',
-        description: 'From beginner to editor<br />Year:2014',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'C# & Windows Forms',
-        description: 'Introduction to programming using C# and Windows Forms<br />Year: 2014',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'C++',
-        description: 'Introduction to programming<br />Year: 2012',
-        icon: 'tabler:headset',
-      },
-    ]}
-    classes={{ container: 'max-w-5xl' }}
-  />
-  
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description:
-          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
-      },
-      {
-        title: 'Role:',
-        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Art and Music Poster Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 1: <br /><span class="text-2xl">Event poster for art & music festival</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
-      },
-      {
-        title: 'Role:',
-        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
-      },
-    ]}
-    image={{
-      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Fashion e-commerce Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <Content
-  isReversed
-  isAfterContent={true}
-  items={[
-    {
-      title: 'Description:',
-      description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
-    },
-    {
-      title: 'Role:',
-      description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
-    },
-  ]}
-  image={{
-    src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-    alt: 'Fashion e-commerce Image',
-  }}
-  callToAction={{
-    target: '_blank',
-    text: 'Go to the project',
-    icon: 'tabler:chevron-right',
-    href: '#',
-  }}
->
-  <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
-    </h3>
-  </Fragment>
-
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Content>
-
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    title="Let's create together"
-    subtitle="Ready to transform your vision into captivating designs?"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Send an email out',
-        href: 'mailto: fajkovic.sasa@proton.me',
-      },
-    ]}
-  />
-
-  <Features3
-    title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
-    columns={3}
+    id="skills"
+    title="Technical skills"
+    subtitle="Just some of the tools and technologies I use on a daily basis"
+    columns={4}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+        title: 'Java & Kotlin',
+        description: 'backend applications and services',
       },
       {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+        title: 'Spring, Ktor and Vert.x frameworks',
+        description: 'Frameworks for building web applications',
       },
       {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+        title: 'Kubernetes & Docker',
+        description: 'Containerization and orchestration',
       },
       {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+        title: 'GitHub Actions & Jenkins',
+        description: 'Modern, fast and scalable CI/CD',
       },
       {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
+        title: 'Kafka & RabbitMQ',
+        description: 'Event driven architecture',
       },
       {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
+        title: 'Prometheus & Grafana',
+        description: 'Monitoring, alerting and observability',
       },
       {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
+        title: 'AWS',
+        description: 'Cloud services',
       },
       {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
+        title: 'PostgreSQL & MySQL',
+        description: 'Relational databases',
       },
       {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+        title: 'Git',
+        description: 'Version control system',
+      },
+      {
+        title: 'Spredsheets',
+        description: 'Because you can\'t avoid them',
+      },
+      {
+        title: 'Snowflake',
+        description: 'Data warehouse',
+      },
+      {
+        title: 'Teleport & Okta',
+        description: 'Identity and access management',
       },
     ]}
   />
+
+  
+<Features3
+id="publications"
+title="Publications"
+subtitle="Old, yet actively used with professionals, academia and in schools"
+columns={3}
+items={[
+  {
+    title: 'Microsoft Word 2016',
+    description: 'Comprehensive guide on writing and editing documents<br />Year: 2016<br />ISBN: 978-953-58990-0-6',
+    icon: 'tabler:stairs',
+  },
+  {
+    title: 'Microsoft Excel 2013',
+    description: 'Power of spredsheet calculations<br />Year: 2015<br />',
+    icon: 'tabler:flip-vertical',
+  },
+  {
+    title: 'C++ programming language',
+    description: 'C++ - Introduction to programming<br />Year:2015',
+    icon: 'tabler:shield-lock',
+  },
+  {
+    title: 'HTML5 & CSS3',
+    description: `Simple website creation.<br />Year: 2015`,
+    icon: 'tabler:accessible',
+  },
+  {
+    title: 'JavaScript',
+    description: 'Introduction to programming using JavaScript<br />Year: 2015',
+    icon: 'tabler:chevrons-up',
+  },
+  {
+    title: 'Microsoft Word 2013',
+    description: 'From beginner to editor<br />Year:2014',
+    icon: 'tabler:headset',
+  },
+  {
+    title: 'C# & Windows Forms',
+    description: 'Introduction to programming using C# and Windows Forms<br />Year: 2014',
+    icon: 'tabler:headset',
+  },
+  {
+    title: 'C++',
+    description: 'Introduction to programming<br />Year: 2012',
+    icon: 'tabler:headset',
+  },
+]}
+classes={{ container: 'max-w-5xl' }}
+/>
+
 
 </Layout>
