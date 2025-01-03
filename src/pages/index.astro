@@ -4,13 +4,13 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import { getPermalink } from '~/utils/permalinks';
 import Button from '~/components/ui/Button.astro';
+import { Image } from 'astro:assets';
+import sasaFajkovicImageBlack from 'src/assets/images/sasaFajkovicBlack.webp';
+
 
 const metadata = {
   title: 'Sasa Fajkovic - tech lead',
@@ -51,7 +51,7 @@ const metadata = {
     id="about"
     columns={2}
     image={{
-      src: 'https://sasa-fajkovic.com/images/sasaFajkovicBlack.webp',
+      src: sasaFajkovicImageBlack,
       alt: 'Colorful Image',
       loading: 'eager',
     }}
@@ -102,26 +102,40 @@ const metadata = {
     items={[
       {
         title:
-          'Technical Lead & Product Owner <br /> <span class="font-normal">Trade Republic, Berlin, DE</span> <br /> <span class="text-sm font-normal">2022 - Present</span>',
-        description: `Leading teams and deliverables across different domains:
+          'Technical Lead & Product Owner <br /> <span class="font-normal">Trade Republic, Berlin, DE</span> <br /> <span class="text-sm font-normal color-gray">2022 - Present</span>',
+        description: `
+        <div>
+        <p>Leading teams and deliverables across different domains:</p>
         <ul style="font-size: initial; list-style: initial; padding-left: 2em;">
           <li>Customer lifecycle domain</li>
+          <li>Timeline event aggregation</li>
           <li>Banking domain</li>
           <li>Developer Exprience Domain</li>
         </ul>
+        <br />
+        Tech stack:
+        <ul style="font-size: initial; list-style: initial; padding-left: 2em;">
+          <li> Kotlin, Spring Boot, Ktor, Vert.x</li>
+          <li> Kafka, RabbitMQ</li>
+          <li> Kubernetes, Docker</li>
+          <li> Prometheus, Grafana, Loki</li>
+          <li> AWS, Snowflake, GitHub Actions</li>
+          <li> PostgreSQL, Aurora</li>
+        </ul>
+        </div>
         `,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Engineering manager <br /> <span class="font-normal">Deutsche Kreditbank AG, Berlin, DE</span> <br /> <span class="text-sm font-normal">2020 - 2022</span>',
+          'Engineering manager & Senior engineer<br /> <span class="font-normal">Deutsche Kreditbank AG, Berlin, DE</span> <br /> <span class="text-sm font-normal">2020 - 2022</span>',
         description: `Delivered new onboarding solutions with enabling faster, smoother and easier B2C onboarding process.<br />Delivered succesfful provisioning of  5+ mil. customers to a new debit card. Managed a full-stack including backend, frontend and QA engineers.`,
         icon: 'tabler:briefcase',
       },
       {
         title:
           'Founder <br /> <span class="font-normal">Digitalni val, Zagreb, HR</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>',
-        description: `WordPress, Google Suite administration, e-commerce development, server management, betting bot`,
+        description: `Small digital agency covering eCommerce & website development, proprietary CMS and CRM, Linux & Windows server management and retail office management.`,
         icon: 'tabler:briefcase',
       },
       {
