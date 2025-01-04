@@ -139,6 +139,7 @@ export interface Item {
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: Image;
+  href?: string;
 }
 
 export interface Price {
@@ -187,6 +188,7 @@ export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
   icon?: string;
   classes?: Record<string, string>;
   type?: 'button' | 'submit' | 'reset';
+  href?: string;
 }
 
 export interface ItemGrid {
