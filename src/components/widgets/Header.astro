@@ -4,6 +4,7 @@ import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import Button from '~/components/ui/Button.astro';
+import { headerData } from '~/navigation';
 
 import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash, getAsset } from '~/utils/permalinks';
@@ -34,13 +35,8 @@ export interface Props {
 
 const {
   id = 'header',
-  links = [
-    { text: 'About', href: '/#about' },
-    { text: 'Experience', href: '/#professional-journey' },
-    { text: 'Publications', href: '/#publications' },
-    { text: 'Blog', href: '/blog' },
-  ],
-  actions = [],
+  links = headerData.links,
+  actions = headerData.actions,
   isSticky = false,
   isDark = false,
   isFullWidth = false,

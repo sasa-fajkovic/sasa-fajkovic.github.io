@@ -3,6 +3,7 @@ publishDate: 2025-01-06T00:00:00Z
 title: Hello World
 excerpt: Website redesign + blog section (because blogging is still alive)
 image: ~/assets/images/posts/2025-01-06_hello-world.jpeg
+category: sasa
 tags:
   - sasa fajkovic
   - hello world
